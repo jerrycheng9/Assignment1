@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
 		exitButton = (Button)findViewById(R.id.exit);
 		listView = (ListView)findViewById(R.id.listView1);
 		addCounterButton.setOnClickListener(new addCounterListener());
+		exitButton.setOnClickListener(new exitListener());
 	}
 	
 	class addCounterListener implements OnClickListener {
@@ -37,7 +38,7 @@ public class MainActivity extends Activity {
 		
 	}
 	
-	class eixtListener implements OnClickListener {
+	class exitListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
