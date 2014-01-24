@@ -33,7 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/add_counter"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical" >
 
     </ListView>
 
