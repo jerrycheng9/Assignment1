@@ -1,6 +1,9 @@
 Assignment1
+
 Name:   JI CHNG
+
 Number: 1358987
+
 CCID:   jcheng1
 ===========
   When first open the application. It will go to the MainAcivity which has Two Button at the Bottom, the left one is 
