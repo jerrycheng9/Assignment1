@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 		addCounterButton.setOnClickListener(listener);
 		exitButton.setOnClickListener(listener);
 	}
-	
+	//Listener for Button 
 	private View.OnClickListener listener = new View.OnClickListener() {
 		
 		@Override
@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
 		CounterList counters = SaveAndLoad.loadFromFile(MainActivity.this);
 		if (counters != null){
 			List<String> list = new ArrayList<String>(counters.getkeys());
+			//Use Bubble Sort. Sort Automatically.
 			for (int i = 0; i < list.size(); i++){
 				for (int j = 1; j < (list.size() - i); j++){
 					if (counters.get(list.get(j-1)).getAmount() < counters.get(list.get(j)).getAmount()){
@@ -65,6 +66,7 @@ public class MainActivity extends Activity {
 					}
 				}
 			}
+			//Set Adapter.
 			listView.setAdapter(new ArrayAdapter<String>(this, R.layout.list_item,list));
 			listView.setOnItemClickListener(new OnItemClickListener() {
 

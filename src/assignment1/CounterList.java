@@ -20,12 +20,12 @@ public class CounterList {
 	public int getSize() {
 		return size;
 	}
-	
+	//Function Rename
 	public void rename(String name,String name2){
 		Counter_List.put(name2, Counter_List.get(name));
 		Counter_List.remove(name);
 	}
-	
+	//Function get Counter by using key(which is name of the counter)
 	public Counter get(String key){
 		return Counter_List.get(key);
 	}
@@ -33,7 +33,7 @@ public class CounterList {
 	public void setSize(int size) {
 		this.size = size;
 	}
-
+	//Function add new counter
 	public void add(String name){
 		if (Counter_List.containsKey(name)){
 			
@@ -42,7 +42,7 @@ public class CounterList {
 			size++;
 		}
 	}
-	
+	//Function get all the keys
 	public Set<String> getkeys(){
 		return Counter_List.keySet();
 	}

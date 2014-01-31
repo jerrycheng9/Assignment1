@@ -8,13 +8,13 @@ import android.content.SharedPreferences;
 public class SaveAndLoad {
 	private static final String FILENAME = "COUNTER";
 	static Gson gson = new Gson();
-	
+	//save function
 	public static void saveInFile(CounterList counters,Context context){
 		String tojson = gson.toJson(counters);
 		SharedPreferences save = context.getSharedPreferences(FILENAME,0);
 		save.edit().putString("json", tojson).commit();
 	}
-	
+	//load function
 	public static  CounterList loadFromFile(Context context){
 		SharedPreferences load = context.getSharedPreferences(FILENAME, 0);
 		String fromjson = load.getString("json", "");
