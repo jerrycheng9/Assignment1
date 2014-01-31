@@ -7,7 +7,6 @@ import assignment1.controller.SaveAndLoad;
 import assignment1.model.Counter;
 import com.example.assignment1.R;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,11 +38,7 @@ public class AddCounter extends Activity{
 				setResult(RESULT_OK);
 				String text = input.getText().toString();
 				Counter counter = new Counter(text, new Date() , "0");
-				SaveAndLoad.saveInFile(counter, AddCounter.this);
-				SaveAndLoad.loadFromFile(AddCounter.this);
-				Intent intent = new Intent(AddCounter.this,MainActivity.class);
-				intent.putExtra("json", SaveAndLoad.loadFromFile(AddCounter.this));
-				startActivity(intent);
+				SaveAndLoad.saveInFile(counter);
 				finish();
 				break;
 			case R.id.cancel:

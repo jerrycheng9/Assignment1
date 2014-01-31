@@ -1,29 +1,17 @@
 package assignment1.activities;
 
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.example.assignment1.R;
 
-import android.widget.AdapterView.OnItemClickListener;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import assignment1.controller.SaveAndLoad;
 import assignment1.model.Counter;
-import assignment1.model.CounterList;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 public class MainActivity extends Activity {
 	private Button addCounterButton = null;
@@ -59,45 +47,15 @@ public class MainActivity extends Activity {
 		}
 	};
 	
+	
+	
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		Gson gson = new Gson();
-		Bundle extras = getIntent().getExtras();
-		if (extras != null){
-			String fromjson = extras.getString("json");
-			final CounterList counters = new CounterList();
-			Type type = new TypeToken<List<Counter>>(){}.getType();
-			List<Counter> counterlist = gson.fromJson(fromjson,type);
-			for (Counter counter : counterlist){
-				counters.add(counter);
-			}
-			final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, R.layout.list_item,counters.getName());
-			listView.setAdapter(myAdapter);
-			listView.setOnItemClickListener(new OnItemClickListener() {
+		setContentView(R.layout.list_item);
+		}
 
-				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1,
-						int arg2, long arg3) {
-					// TODO Auto-generated method stub
-					AlertDialog.Builder adb=new AlertDialog.Builder(MainActivity.this);
-			        adb.setTitle("Delete?");
-			        adb.setMessage("Are you sure you want to delete " + arg2);
-			        final int positionToRemove = arg2;
-			        adb.setNegativeButton("Cancel", null);
-			        adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
-			            public void onClick(DialogInterface dialog, int which) {
-			                counters.remove(positionToRemove);
-			                myAdapter.notifyDataSetChanged();
-			            }});
-			        adb.show();
-					
-				}
-				
-			});
-		}
-		}
 
 
 	@Override
