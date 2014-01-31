@@ -60,6 +60,15 @@ public class MainActivity extends Activity {
 		if (counters != null){
 			Set<String> set = counters.getkeys();
 			List<String> list = new ArrayList<String>(set);
+			for (int i = 0; i < list.size(); i++){
+				for (int j = 1; j < (list.size() - i); j++){
+					if (counters.get(list.get(j-1)).getAmount() < counters.get(list.get(j)).getAmount()){
+						String temp = list.get(j-1);
+						list.set(j-1, list.get(j));
+						list.set(j, temp);
+					}
+				}
+			}
 			listView.setAdapter(new ArrayAdapter<String>(this, R.layout.list_item,list));
 			listView.setOnItemClickListener(new OnItemClickListener() {
 

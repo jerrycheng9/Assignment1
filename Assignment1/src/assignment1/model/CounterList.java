@@ -20,6 +20,11 @@ public class CounterList {
 		return size;
 	}
 	
+	public void rename(String name,String name2){
+		Counter_List.put(name2, Counter_List.get(name));
+		Counter_List.remove(name);
+	}
+	
 	public Counter get(String key){
 		return Counter_List.get(key);
 	}

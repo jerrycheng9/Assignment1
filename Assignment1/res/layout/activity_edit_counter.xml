@@ -34,23 +34,6 @@
         android:text="@string/res" />
 
     <Button
-        android:id="@+id/rename"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/reset"
-        android:layout_alignRight="@+id/increse"
-        android:text="@string/ren" />
-
-    <Button
-        android:id="@+id/sumarize"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/increse"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="42dp"
-        android:text="@string/sum" />
-
-    <Button
         android:id="@+id/increse"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -66,5 +49,30 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp"
         android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/sumarize"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/increse"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sum" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rename"
+        android:layout_alignBottom="@+id/rename"
+        android:layout_toLeftOf="@+id/rename"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/rename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/reset"
+        android:layout_centerVertical="true"
+        android:text="@string/ren" />
 
 </RelativeLayout>
