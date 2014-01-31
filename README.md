@@ -10,7 +10,7 @@ CCID:   jcheng1
 AddCouter which will start the new Activity(AddCounterActivity). The right ont is Exit. It will quit the app. And on
 the top there is a ListView which can display the counters u added(It will display on Descendind order).
 
-  After clicking AddCounter Button, It will start the ACounter Activiy. It's a Dialog. There is a EditText in the 
+  After clicking AddCounter Button, It will start the AddCounter Activiy. It's a Dialog. There is a EditText in the 
 middle that u can Enter the new counter's name. And then clik the left bottom button Add, it will add the Counter's 
 name to the MainAvtivity's ListView. Also, it will close this activity and go back to MainActivity. The right bottom
 Button is Cancel. After clicking it, it will just renturn to the MainActivity and Doing nothing.
