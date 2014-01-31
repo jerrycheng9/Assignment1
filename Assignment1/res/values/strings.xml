@@ -9,5 +9,11 @@
     <string name="cancel">Cancel</string>
     <string name="title_activity_add_counter">AddCounter</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_edit_counter">EditCounter</string>
+    <string name="incre">Increse</string>
+    <string name="res">Reset</string>
+    <string name="ren">Rename</string>
+    <string name="del">Delete</string>
+    <string name="sum">Sumarize</string>
 
 </resources>

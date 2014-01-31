@@ -17,12 +17,12 @@ public class Counter {
 	/**
 	 * @uml.property  name="amount"
 	 */
-	private String amount;
+	private int amount;
 	
 	public Counter(){	
 	}
 	
-	public Counter(String name, Date date, String amount){
+	public Counter(String name, Date date, int amount){
 		this.name = name;
 		this.date = date;
 		this.amount = amount;
@@ -64,7 +64,7 @@ public class Counter {
 	 * @return
 	 * @uml.property  name="amount"
 	 */
-	public String getAmount() {
+	public int getAmount() {
 		return amount;
 	}
 
@@ -72,7 +72,7 @@ public class Counter {
 	 * @param amount
 	 * @uml.property  name="amount"
 	 */
-	public void setAmount(String amount) {
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
 

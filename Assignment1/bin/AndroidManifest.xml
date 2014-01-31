@@ -27,6 +27,10 @@
             android:label="@string/title_activity_add_counter"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
+        <activity
+            android:name="assignment1.activities.EditCounter"
+            android:label="@string/title_activity_edit_counter" >
+        </activity>
     </application>
 
 </manifest>
